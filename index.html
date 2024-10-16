@@ -37,15 +37,17 @@
                     return;
                 }
 
+                const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((timeRemaining / (1000 * 60 * 60)) % 24);
                 const minutes = Math.floor((timeRemaining / (1000 * 60)) % 60);
                 const seconds = Math.floor((timeRemaining / 1000) % 60);
 
+                const daysStr = days === 1 ? days + " día" : days + " días";
                 const hoursStr = hours === 1 ? hours + " hora" : hours + " horas";
                 const minutesStr = minutes === 1 ? minutes + " minuto" : minutes + " minutos";
                 const secondsStr = seconds === 1 ? seconds + " segundo" : seconds + " segundos";
 
-                display.textContent = `Faltan ${hoursStr}, ${minutesStr} y ${secondsStr}`;
+                display.textContent = `Faltan ${daysStr}, ${hoursStr}, ${minutesStr} y ${secondsStr}`;
             }
 
             const timerInterval = setInterval(updateTimer, 1000);
