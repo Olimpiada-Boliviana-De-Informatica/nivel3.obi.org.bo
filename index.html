@@ -1,64 +1,67 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Olimpiada Boliviana de Informática</title>
-    <style>
-        body {
-            background-color: #f0f0f0;
-            color: #333;
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-
-        #countdown {
-            font-size: 2em;
-            text-align: center;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Comunicado Oficial – OCEPB 2025</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    <div id="countdown"></div>
+<body class="bg-gray-100 font-sans">
 
-    <script>
-        function startCountdown(endTime, display) {
-            function updateTimer() {
-                const now = new Date().getTime();
-                const timeRemaining = endTime - now;
+  <div class="max-w-3xl mx-auto mt-10 p-6 bg-white rounded-2xl shadow-xl space-y-6">
+    <!-- Imagen -->
+    <img src="banner.jpg" alt="OCEPB 2025" class="rounded-lg shadow-md w-full">
 
-                if (timeRemaining <= 0) {
-                    display.textContent = "¡El tiempo ha terminado!";
-                    clearInterval(timerInterval);
-                    return;
-                }
+    <!-- Título -->
+    <h1 class="text-2xl md:text-3xl font-bold text-center text-gray-800">
+      📣 Comunicado Oficial – Etapa Distrital Informática OCEPB 2025
+    </h1>
 
-                const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((timeRemaining / (1000 * 60 * 60)) % 24);
-                const minutes = Math.floor((timeRemaining / (1000 * 60)) % 60);
-                const seconds = Math.floor((timeRemaining / 1000) % 60);
+    <!-- Texto principal -->
+    <div class="space-y-4 text-gray-800 text-lg leading-relaxed">
+      <p>
+        La práctica oficial para la Etapa Distrital estará disponible los días
+        <strong class="text-blue-700">jueves 15</strong> y
+        <strong class="text-blue-700">viernes 16 de mayo</strong> en el siguiente enlace:
+      </p>
 
-                const daysStr = days === 1 ? days + " día" : days + " días";
-                const hoursStr = hours === 1 ? hours + " hora" : hours + " horas";
-                const minutesStr = minutes === 1 ? minutes + " minuto" : minutes + " minutos";
-                const secondsStr = seconds === 1 ? seconds + " segundo" : seconds + " segundos";
+      <p class="bg-blue-100 border border-blue-300 p-4 rounded text-center text-blue-900 font-semibold">
+        🔗 <a href="https://practica.obi.org.bo" class="underline hover:text-blue-700" target="_blank">practica.obi.org.bo</a>
+      </p>
 
-                display.textContent = `Faltan ${daysStr}, ${hoursStr}, ${minutesStr} y ${secondsStr}`;
-            }
+      <p>
+        📌 Para ingresar, el <strong>usuario</strong> es el número <strong>RUDE</strong> y la <strong>contraseña</strong> es el número de <strong>carnet de identidad</strong>.
+      </p>
 
-            const timerInterval = setInterval(updateTimer, 1000);
-            updateTimer();
-        }
+      <p>
+        La competencia distrital se llevará a cabo el día
+        <strong class="text-green-700">sábado 17 de mayo</strong>, en los siguientes enlaces:
+      </p>
 
-        window.onload = function () {
-            const countdownEnd = new Date("2024-10-19T09:00:00").getTime();
-            const display = document.getElementById('countdown');
-            startCountdown(countdownEnd, display);
-        };
-    </script>
+      <ul class="list-disc pl-6 space-y-1">
+        <li>🧠 Nivel 2: 
+          <a href="https://nivel2.obi.org.bo" class="text-green-600 underline hover:text-green-800" target="_blank">
+            nivel2.obi.org.bo
+          </a>
+        </li>
+        <li>🧠 Nivel 3: 
+          <a href="https://nivel3.obi.org.bo" class="text-red-600 underline hover:text-red-800" target="_blank">
+            nivel3.obi.org.bo
+          </a>
+        </li>
+      </ul>
+
+      <div class="bg-gray-50 border border-gray-300 p-4 rounded">
+        <p class="font-semibold">🕘 Horario de competencia:</p>
+        <p><strong>Inicio:</strong> 9:00 AM</p>
+        <p><strong>Fin:</strong> 9:00 PM</p>
+      </div>
+
+      <p class="text-center text-xl text-indigo-700 font-semibold mt-6">
+        ¡Mucho éxito a todos los participantes! 💻🇧🇴
+      </p>
+    </div>
+  </div>
+
 </body>
 </html>
